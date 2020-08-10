@@ -1,6 +1,5 @@
 package com.github.jaceed.extender.standard
 
-import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.InvocationKind
 import kotlin.contracts.contract
 
@@ -9,7 +8,9 @@ import kotlin.contracts.contract
  * Date: 2020.08.10
  */
 
-@ExperimentalContracts
+/**
+ * Calls the specified function [block] when `this` contains non-empty content, and `this` as its receiver
+ */
 inline fun <R> String?.available(block: (String) -> R?): R? {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
