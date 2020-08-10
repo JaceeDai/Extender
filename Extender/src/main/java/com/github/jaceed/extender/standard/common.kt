@@ -7,6 +7,9 @@ import kotlin.contracts.contract
  * Date: 2020.08.10
  */
 
+/**
+ * Return [true] if the given item exists in the all-non-null-item array.
+ */
 infix fun <T> T?.anyOf(array: Array<T>): Boolean {
     contract {
         returns(true) implies (this@anyOf != null)
