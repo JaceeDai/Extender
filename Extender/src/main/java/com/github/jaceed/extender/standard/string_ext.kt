@@ -19,3 +19,14 @@ inline fun <R> String?.available(block: (String) -> R?): R? {
         block(this!!)
     } else null
 }
+
+fun String?.availableWith(default: String): String {
+    return available {
+        it
+    } ?: default.available {
+        it
+    } ?: run {
+        check(default.isNotEmpty())
+        ""
+    }
+}
