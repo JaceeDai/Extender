@@ -1,8 +1,10 @@
 package com.github.jaceed.extender.view
 
+import android.graphics.drawable.Drawable
 import android.os.SystemClock
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 
 /**
@@ -92,3 +94,11 @@ fun Array<out View>.setOnProtectedClickListener(l: View.OnClickListener, delay: 
         it.setOnProtectedClickListener(l, delay)
     }
 }
+
+
+var ImageView.content: Drawable?
+    get() = drawable
+    set(value) {
+        setImageDrawable(value)
+        visible = value != null
+    }
