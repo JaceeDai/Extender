@@ -22,7 +22,7 @@ Then, add the dependency:
 
 ```gradle
     dependencies {
-	        implementation 'com.github.jaceed:extender:1.0.0'
+	        implementation 'com.github.jaceed:extender:1.0.2'
 	}
 ```
 
@@ -43,7 +43,7 @@ and
     <dependency>
 	    <groupId>com.github.jaceed</groupId>
 	    <artifactId>extender</artifactId>
-	    <version>1.0.0</version>
+	    <version>1.0.2</version>
 	</dependency>
 ```
 
