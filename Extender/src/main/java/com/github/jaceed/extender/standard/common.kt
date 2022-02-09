@@ -24,3 +24,9 @@ infix fun <T> T?.anyOf(array: Array<T>): Boolean {
     }
     return false
 }
+
+/**
+ * Simple name of a type
+ */
+inline val <T : Any> T.TAG: String
+    get() = javaClass.simpleName
