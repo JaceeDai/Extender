@@ -30,3 +30,7 @@ fun String?.availableWith(default: String): String {
         ""
     }
 }
+
+infix fun String?.orBy(default: String?): String {
+    return if (isNullOrEmpty()) default ?: "" else this!!
+}
