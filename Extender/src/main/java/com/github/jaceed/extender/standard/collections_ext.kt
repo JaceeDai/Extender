@@ -18,3 +18,11 @@ inline fun <E, T: Collection<E>, R> T?.available(block: (T) -> R?): R? {
         block(this)
     } else null
 }
+
+fun <T> Collection<T>.hasAny(vararg params: T): Boolean {
+    params.forEach {
+        if (contains(it))
+            return true
+    }
+    return false
+}
