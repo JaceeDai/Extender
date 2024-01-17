@@ -10,7 +10,7 @@ import kotlin.contracts.contract
 /**
  * Calls the specified function [block] when `this` contains non-zero-size items, and `this` as its receiver
  */
-inline fun <T, R> Collection<T>?.available(block: (Collection<T>) -> R?): R? {
+inline fun <E, T: Collection<E>, R> T?.available(block: (T) -> R?): R? {
     contract {
         returnsNotNull() implies (this@available != null)
     }
